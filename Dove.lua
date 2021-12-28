@@ -1042,7 +1042,7 @@ local Rio = DataText:match('/Song:'..tonumber(data.sender_user_id_)..'(.*)')
 Rio = math.random(4,2824); 
 local Text ='*⌔︰تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
-keyboard.inline_keyboard = {{{text=". مره اخرى ⌔",callback_data="/Song:"..data.sender_user_id_}},{{text=". Source Dove ⌔",url="t.me/EEPEF"}}} 
+keyboard.inline_keyboard = {{{text=". مره اخرى ⌔",callback_data="/Song:"..data.sender_user_id_}},{{text="⌔ Dove Source .",url="t.me/EEPEF"}}} 
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Rio..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
