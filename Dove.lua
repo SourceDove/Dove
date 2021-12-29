@@ -3334,8 +3334,8 @@ send(msg.chat_id_,msg.id_,"⌔︰تم الغاء حفظ الرابط")
 DevRio:del(Dove.."Rio:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) 
 return false
 end
-if msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content_.text_:match("(https://t.me/joinchat/%S+)") then
-local Link = msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content_.text_:match("(https://t.me/joinchat/%S+)")
+if msg.content_.text_:match("(https://telegram.me/%S+)") or msg.content_.text_:match("(https://t.me/%S+)") then
+local Link = msg.content_.text_:match("(https://telegram.me/%S+)") or msg.content_.text_:match("(https://t.me/%S+)")
 DevRio:set(Dove.."Rio:Groups:Links"..msg.chat_id_,Link)
 Dev_Rio(msg.chat_id_, msg.id_, 1, '⌔︰تم حفظ الرابط بنجاح', 1, 'md')
 DevRio:del(Dove.."Rio:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) 
