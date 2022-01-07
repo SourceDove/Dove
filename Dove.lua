@@ -9338,8 +9338,8 @@ riomoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DoveTeam, 14, string.len(ms
 DevRio:set(Dove..'Rio:Age:Rio'..msg.chat_id_,true)  
 end
 if not DevRio:get(Dove..'Rio:Age:Rio'..msg.chat_id_) then
-if text and text:match("^احسب (.*)$") and ChCheck(msg) or text and text:match("^عمري (.*)$") and ChCheck(msg) then 
-local TextAge = text:match("^احسب (.*)$") or text:match("^عمري (.*)$") 
+if text and text:match("^احسب (.*)$") and ChCheck(msg) then 
+local TextAge = text:match("^احسب (.*)$") 
 UrlAge = https.request('https://apiabs.ml/age.php?age='..URL.escape(TextAge)) 
 Age = JSON.decode(UrlAge) 
 t = Age.ok.abs
